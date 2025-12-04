@@ -1,6 +1,6 @@
 {
 	"name": "create-aynorica",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Scaffold a new Aynorica-powered project with GitHub configuration templates",
 	"type": "module",
 	"bin": {
