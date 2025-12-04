@@ -1,0 +1,47 @@
+{
+	"name": "create-aynorica",
+	"version": "1.0.0",
+	"description": "Scaffold a new Aynorica-powered project with GitHub configuration templates",
+	"type": "module",
+	"bin": {
+		"create-aynorica": "./bin/cli.js"
+	},
+	"files": [
+		"bin",
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"aynorica",
+		"second-brain",
+		"obsidian",
+		"template",
+		"scaffolding",
+		"cli",
+		"create"
+	],
+	"author": "Amir Daryabari <amir@aynorica.dev>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aynorica/create-aynorica.git"
+	},
+	"bugs": {
+		"url": "https://github.com/aynorica/create-aynorica/issues"
+	},
+	"homepage": "https://github.com/aynorica/create-aynorica#readme",
+	"dependencies": {
+		"commander": "^11.1.0",
+		"inquirer": "^9.2.12",
+		"chalk": "^5.3.0",
+		"ora": "^8.0.1",
+		"node-fetch": "^3.3.2"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
