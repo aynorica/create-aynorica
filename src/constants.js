@@ -15,8 +15,13 @@ export const GITHUB_RAW_BASE = "https://raw.githubusercontent.com";
 
 /**
  * Template files to fetch and process
+ * Complete .github/ directory structure from aynorica-os
  */
 export const TEMPLATE_FILES = [
+	".github/.aynorica-config.json",
+	".github/.aynorica-config.schema.json",
+	".github/agents/aynorica.agent.md",
+	".github/agents/test.agent.md",
 	".github/instructions/amir-profile.instructions.md",
 	".github/instructions/available-techstack.instructions.md",
 	".github/instructions/debug-principle.instructions.md",
@@ -25,6 +30,32 @@ export const TEMPLATE_FILES = [
 	".github/instructions/handoff.instructions.md",
 	".github/instructions/honesty.instructions.md",
 	".github/instructions/identity.instructions.md",
+	".github/project/.gitkeep",
+	".github/project/README.md",
+	".github/project/examples/context.example.md",
+	".github/project/examples/focus.example.md",
+	".github/project/examples/workflows.example.md",
+	".github/prompts/analysis/task-prioritization.prompt.md",
+	".github/prompts/architecture/adr-template.prompt.md",
+	".github/prompts/architecture/trade-off-analysis.prompt.md",
+	".github/prompts/backend/nestjs-controller.prompt.md",
+	".github/prompts/backend/nestjs-module.prompt.md",
+	".github/prompts/backend/nestjs-service.prompt.md",
+	".github/prompts/backend/nestjs-testing.prompt.md",
+	".github/prompts/cli/commander-setup.prompt.md",
+	".github/prompts/devops/pm2-ecosystem.prompt.md",
+	".github/prompts/git/workflow.prompt.md",
+	".github/prompts/monorepo/turborepo-setup.prompt.md",
+	".github/prompts/npm/package-publishing.prompt.md",
+	".github/prompts/security/nodejs-security-hardening.prompt.md",
+	".github/prompts/security/npm-package-security.prompt.md",
+	".github/prompts/security/owasp-top10-analysis.prompt.md",
+	".github/prompts/security/secure-code-review.prompt.md",
+	".github/prompts/security/threat-modeling.prompt.md",
+	".github/prompts/system/adaptation.prompt.md",
+	".github/prompts/system/stack-detection.reference.md",
+	".github/prompts/typescript/esm-migration.prompt.md",
+	".github/prompts/typescript/package-setup.prompt.md",
 ];
 
 /**
