@@ -4,7 +4,7 @@
 	"description": "Scaffold a new Aynorica-powered project with GitHub configuration templates",
 	"type": "module",
 	"bin": {
-		"create-aynorica": "./bin/cli.js"
+		"create-aynorica": "bin/cli.js"
 	},
 	"files": [
 		"bin",
@@ -28,7 +28,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aynorica/create-aynorica.git"
+		"url": "git+https://github.com/aynorica/create-aynorica.git"
 	},
 	"bugs": {
 		"url": "https://github.com/aynorica/create-aynorica/issues"
