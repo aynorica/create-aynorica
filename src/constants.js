@@ -19,19 +19,12 @@ export const GITHUB_RAW_BASE = "https://raw.githubusercontent.com";
 export const TEMPLATE_FILES = [
 	".github/instructions/amir-profile.instructions.md",
 	".github/instructions/available-techstack.instructions.md",
-	".github/instructions/best-practices.instructions.md",
 	".github/instructions/debug-principle.instructions.md",
 	".github/instructions/disagreement-protocol.instructions.md",
 	".github/instructions/functions.instructions.md",
 	".github/instructions/handoff.instructions.md",
 	".github/instructions/honesty.instructions.md",
 	".github/instructions/identity.instructions.md",
-	".github/instructions/infrastructure.instructions.md",
-	".github/instructions/mcp.instructions.md",
-	".github/instructions/memory.instructions.md",
-	".github/instructions/mesh.instructions.md",
-	".github/instructions/obsidian.instructions.md",
-	".github/instructions/schema.instructions.md",
 ];
 
 /**
