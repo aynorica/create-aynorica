@@ -1,7 +1,7 @@
 {
 	"name": "create-aynorica",
-	"version": "1.1.1",
-	"description": "Scaffold a new Aynorica-powered project with GitHub configuration templates",
+	"version": "1.2.0",
+	"description": "Scaffold the Aynorica mental model into any project - a systematic problem solver agent for VS Code Copilot",
 	"type": "module",
 	"bin": {
 		"create-aynorica": "bin/cli.js"
@@ -17,12 +17,14 @@
 	},
 	"keywords": [
 		"aynorica",
-		"second-brain",
-		"obsidian",
-		"template",
+		"copilot",
+		"vscode",
+		"agent",
+		"mental-model",
 		"scaffolding",
 		"cli",
-		"create"
+		"create",
+		"github-copilot"
 	],
 	"author": "Amir Daryabari <amir@aynorica.dev>",
 	"license": "MIT",
