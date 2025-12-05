@@ -21,7 +21,6 @@ export const TEMPLATE_FILES = [
 	".github/.aynorica-config.json",
 	".github/.aynorica-config.schema.json",
 	".github/agents/aynorica.agent.md",
-	".github/agents/test.agent.md",
 	".github/instructions/amir-profile.instructions.md",
 	".github/instructions/available-techstack.instructions.md",
 	".github/instructions/debug-principle.instructions.md",
