@@ -1,64 +1,96 @@
 # create-aynorica
 
-> Scaffold a new Aynorica-powered project in seconds
+> Scaffold the Aynorica mental model into any project
 
-## Installation
+**Aynorica** is a systematic problem solver agent for VS Code's GitHub Copilot Chat. This CLI tool copies the complete `.github` configuration structure into your project.
 
-No installation needed! Use `npx`:
-
-```bash
-npx create-aynorica my-project
-```
-
-## Usage
-
-### Interactive Mode (Recommended)
+## Quick Start
 
 ```bash
-npx create-aynorica my-project
-# → Answer prompts for customization
+npx create-aynorica
 ```
 
-### Quick Start (Skip Prompts)
+That's it. The tool will:
+
+1. Ask for your name, email, and timezone
+2. Download the latest Aynorica mental model from GitHub
+3. Create the `.github` folder in your target directory
+
+## What Gets Installed?
+
+```
+.github/
+├── .aynorica-config.json      # Adaptation state
+├── agents/
+│   └── aynorica.agent.md      # Agent definition for VS Code
+├── instructions/              # 9 core instruction files
+│   ├── identity.instructions.md
+│   ├── functions.instructions.md
+│   ├── debug-principle.instructions.md
+│   └── ...
+├── prompts/                   # 14 prompt domains
+│   ├── architecture/
+│   ├── backend/
+│   ├── testing/
+│   ├── security/
+│   └── ...
+└── project/                   # Session state & examples
+    ├── mental-model-map.md
+    └── examples/
+```
+
+## After Installation
+
+1. **Open the project in VS Code**
+2. **Switch to 'aynorica' agent mode** in Copilot Chat
+3. **Say:** `Adapt to this project` — Aynorica will analyze your stack and optimize
+
+## CLI Options
 
 ```bash
-npx create-aynorica my-project --skip-prompts
-# → Uses default values
+npx create-aynorica [options]
+
+Options:
+  -d, --dir <path>   Target directory (defaults to current)
+  -o, --overwrite    Overwrite existing files
+  --debug            Enable debug logging
+  --silent           Suppress output
+  -V, --version      Show version
+  -h, --help         Show help
 ```
 
-## What Gets Created?
+## Examples
 
-Your project will have:
+```bash
+# Install in current directory
+npx create-aynorica
 
--   `.github/instructions/` - Personalized Aynorica instructions
--   `.github/prompts/` - Reusable prompt templates
--   `.github/workflows/` - (If present in template)
+# Install in specific project
+npx create-aynorica -d ./my-project
 
-## Customization
-
-During setup, you'll be asked for:
-
--   Your full name
--   Email address
--   Timezone details
-
-These values replace `{{PLACEHOLDERS}}` in instruction files.
+# Update existing installation
+npx create-aynorica -o
+```
 
 ## Requirements
 
--   Node.js >= 18.0.0
--   Internet connection (fetches from GitHub)
+- Node.js >= 18.0.0
+- Internet connection (fetches latest from [aynorica-os](https://github.com/aynorica/aynorica-os))
+
+## How It Works
+
+1. Fetches all `.github` files from `aynorica/aynorica-os` repo
+2. Replaces `{{PLACEHOLDERS}}` with your info
+3. Writes files to target directory
+4. Resets `adapted: null` so first-run adaptation triggers
 
 ## Troubleshooting
 
-**Error: Directory already exists**  
-→ Choose a different project name or remove existing directory
-
-**Error: Cannot reach GitHub**  
-→ Check internet connection and try again
-
-**Error: GitHub API rate limit**  
-→ Wait 1 hour or authenticate with GitHub CLI
+| Error | Solution |
+|-------|----------|
+| Directory not writable | Check permissions or choose different path |
+| Cannot reach GitHub | Check internet, try again |
+| File already exists | Use `-o` flag to overwrite |
 
 ## License
 
