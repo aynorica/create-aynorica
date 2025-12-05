@@ -33,7 +33,7 @@ export async function run(options = {}) {
 	try {
 		// Step 1: Welcome
 		logger.section("🚀 create-aynorica");
-		logger.info("This tool will set up personalized Aynorica instructions");
+		logger.info("Scaffold the Aynorica mental model into your project");
 		logger.newline();
 
 		// Step 2: Check GitHub connectivity
@@ -88,12 +88,12 @@ export async function run(options = {}) {
 		// Step 5: Fetch templates from GitHub
 		logger.section("⬇️  Fetching Templates");
 		const fetchSpinner = ora(
-			"Downloading templates from GitHub...",
+			"Downloading Aynorica mental model from GitHub...",
 		).start();
 
 		const templates = await fetchAllTemplates({
 			onProgress: (current, total, fileName) => {
-				fetchSpinner.text = `Downloading templates... (${current}/${total}) ${fileName}`;
+				fetchSpinner.text = `Downloading... (${current}/${total}) ${fileName}`;
 			},
 		});
 
@@ -140,17 +140,21 @@ export async function run(options = {}) {
 		}
 
 		// Step 8: Success
-		logger.section("✅ Setup Complete");
-		logger.success(
-			"Aynorica instructions have been personalized and saved",
-		);
+		logger.section("✅ Aynorica Mental Model Installed");
+		logger.success("The .github folder now contains the complete Aynorica system");
 		logger.info(`Location: ${targetDir}`);
 		logger.info(`Files created: ${createdFiles.length}`);
 		logger.newline();
+		logger.info("What you got:");
+		logger.info("  • 9 instruction files (identity, functions, debugging, etc.)");
+		logger.info("  • 14 prompt domains (architecture, testing, security, etc.)");
+		logger.info("  • Agent definition (aynorica.agent.md)");
+		logger.info("  • Adaptation system (.aynorica-config.json)");
+		logger.newline();
 		logger.info("Next steps:");
-		logger.info("  1. Review the generated files");
-		logger.info("  2. Copy them to your aynorica-os workspace");
-		logger.info("  3. Commit the changes to your repository");
+		logger.info("  1. Open the project in VS Code");
+		logger.info("  2. In Copilot Chat, switch to 'aynorica' agent mode");
+		logger.info("  3. Say: 'Adapt to this project' to customize for your stack");
 		logger.newline();
 
 		return EXIT_CODES.SUCCESS;
